@@ -1,13 +1,141 @@
 body {
+  height: 100vh;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  background-image: url("./bcg.jpg");
+  background-size: cover;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app {
+  max-width: 570px;
+  background-color: rgb(97, 100, 110, 0.7);
+  margin: 100px auto;
+  padding: 20px 50px 30px 50px;
+}
+
+.header {
+  text-align: center;
+  font-size: 35px;
+  color: rgb(204, 204, 255, 0.9);
+  letter-spacing: 13px;
+  margin: 0 0 50px 0;
+  text-transform: uppercase;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.form-input {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  border-bottom: 2px solid rgb(238, 231, 255);
+  width: 300px;
+  padding: 3px 0;
+  font-size: 18px;
+  color: rgb(238, 231, 255);
+  cursor: pointer;
+}
+
+.add-button {
+  margin-left: -34px;
+  margin-right: 20px;
+  padding: 3px 6px;
+  cursor: pointer;
+  color: rgb(238, 231, 255);
+  background-color: rgb(204, 204, 255, 0.7);
+  font-size: 14px;
+  outline: none;
+  border: none;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.plus-icon {
+  font-size: 23px;
+  font-weight: 600;
+  padding: 0 4px;
+}
+
+.fa-plus:before {
+  content: "\2b";
+}
+
+/* Filter */
+.filter {
+  appearance: none;
+  outline: none;
+  width: 135px;
+  background-color: transparent;
+  font-size: 13px;
+  padding: 5px 15px;
+  border-radius: 9px;
+  transition: all 0.2s;
+  cursor: pointer;
+  color: rgb(238, 231, 255);
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: 1px solid rgb(238, 231, 255);
+  text-align: center;
+}
+
+.filter > option {
+  background-color: rgb(60, 80, 164, 0.5);
+  color: rgb(238, 231, 255);
+}
+
+.list-container {
+  padding-left: 32px;
+}
+
+.new-todo-container {
+  display: flex;
+  align-items: center;
+  max-width: 425px;
+  margin: 25px;
+  border-bottom: 2px solid rgb(238, 231, 255);
+  font-size: 18px;
+  transition: all 0.5s ease;
+  color: rgb(238, 231, 255);
+}
+
+.todo-list {
+  list-style: none;
+  flex: 1;
+  font-size: 20px;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/* Buttons */
+.complete-btn,
+.trash-btn {
+  padding: 6px 8px;
+  cursor: pointer;
+  color: rgb(238, 231, 255);
+  font-size: 14px;
+  border: 0;
+  border-radius: 5px;
+  text-decoration: line-through;
+}
+
+.complete-btn {
+  background-color: rgba(0, 255, 42, 0.561);
+}
+
+.trash-btn {
+  background-color: rgba(255, 81, 0, 0.794);
+}
+
+.fall {
+  transform: translateY(50px) rotateZ(10deg);
+  opacity: 0;
 }
